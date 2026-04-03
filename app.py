@@ -117,7 +117,7 @@ with col1:
         "1 Settimana %": "{:.2f}",
         "1 Mese %": "{:.2f}",
         "3 Mesi %": "{:.2f}"
-    }).applymap(lambda x: 'color: #00ff41' if isinstance(x, (int, float)) and x > 0 else ('color: #ff4136' if isinstance(x, (int, float)) and x < 0 else ''), subset=['1 Giorno %', '1 Settimana %', '1 Mese %', '3 Mesi %']), use_container_width=True)
+    }).map(lambda x: 'color: #00ff41' if isinstance(x, (int, float)) and x > 0 else ('color: #ff4136' if isinstance(x, (int, float)) and x < 0 else ''), subset=['1 Giorno %', '1 Settimana %', '1 Mese %', '3 Mesi %']), use_container_width=True)
 
 with col2:
     st.subheader("📊 KPI Medi")
